@@ -9,6 +9,9 @@ readme = "README.md"
 python = "^3.10"
 fastapi = "^0.86.0"
 uvicorn = {extras = ["standard"], version = "^0.19.0"}
+dapr = "^1.8.3"
+dapr-ext-grpc = "^1.8.3"
+dapr-ext-fastapi = "^1.8.3"
 
 
 [build-system]
