@@ -17,3 +17,6 @@ dapr-ext-fastapi = "^1.8.3"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "lightson.main:start"

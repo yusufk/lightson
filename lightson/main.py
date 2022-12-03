@@ -1,3 +1,4 @@
+import uvicorn
 from fastapi import FastAPI
 import os
 import logging
@@ -39,3 +40,7 @@ def read_item(block_id: int):
         finally:
             app.logger.info('completed block call')
     return {"block_id": block_id}
+
+def start():
+    """Launched with `poetry run start` at root level"""
+    uvicorn.run("lightson.main:app", host="0.0.0.0", port=80, reload=True)
