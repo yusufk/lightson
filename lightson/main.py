@@ -17,7 +17,7 @@ def index():
 
 @app.get("/lightson/{block_id}")
 def read_item(block_id: int):
-    app.logger.info('ligthson service called')
+    logging.info('ligthson service called')
     with DaprClient() as d:
         d.wait(5)
         try:
@@ -35,10 +35,10 @@ def read_item(block_id: int):
                 resp.status_code = 500
                 return resp
         except Exception as e:
-            app.logger.info(e)
+            logging.info.info(e)
             return str(e)
         finally:
-            app.logger.info('completed block call')
+            logging.info('completed block call')
     return {"block_id": block_id}
 
 def start():
