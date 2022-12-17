@@ -15,4 +15,4 @@ COPY ./lightson /code/lightson
 
 #
 EXPOSE 80 
-CMD ["dapr","run","--app-id","lightson","--","uvicorn","lightson.main:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "lightson.main:app", "--host", "0.0.0.0", "--port", "80"]
